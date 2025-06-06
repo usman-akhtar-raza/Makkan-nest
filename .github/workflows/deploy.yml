@@ -24,7 +24,7 @@ jobs:
     - name: SSH and deploy
       run: |
         ssh ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} << 'EOF'
-          cd ~/makkan-nest
+          cd ~/Makkan-nest
           git pull origin main
           npm install
           npm run build

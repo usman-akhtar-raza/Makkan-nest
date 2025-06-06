@@ -21,6 +21,9 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.HOST_DNS }} >> ~/.ssh/known_hosts
 
+
+
+
     - name: SSH and deploy
       run: |
         ssh ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} << 'EOF'

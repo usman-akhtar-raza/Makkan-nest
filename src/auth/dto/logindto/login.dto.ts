@@ -1,4 +1,4 @@
-import { IsEmail, IsString, Matches } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, Matches } from 'class-validator';
 import { Transform } from 'class-transformer';
 
 export class SignUpDto {
@@ -10,5 +10,6 @@ export class SignUpDto {
   email: string;
 
   @IsString()
-  password:string
+  @IsNotEmpty()
+  password: string;
 }
